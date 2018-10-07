@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+编写程序求 1+3+5+7+……+99 的和值。
+<script>
+	
+	var i=1;
+	var sum=0;
+	while(i<100){
+		 sum=sum+i;
+		 i=i+2;
+	}
+    document.write(sum);
+	var sum=0;
+	for(var i=1;i<100;i+=2){
+		sum=sum+i;	
+	}
+		document.write(sum);
+</script>	
+编写程序输出1-100之间所有能被7整除的偶数。
+<script>	
+	var j=1;
+	for(;j<=100;j++){
+		j=j+1;
+		if(j%7==0){
+			document.write(j+"<br/>");
+		}
+		}
+</script>	
+求所有满足如下条件的四位数：
+  千位上的数字大于百位数字，百位数字大于十位数字，十位数字大于个位数字，并
+  且千位数字是其他三位数字的和。
+  <script>
+	var i;
+	for(i=1000;i<10000;i++){
+		var qian=Math.floor(i/1000);
+		var bai=Math.floor(i%1000/100);
+		var shi=Math.floor(i%100/10);
+		var ge=i%10;
+		if(qian>bai && bai>shi && shi>ge && qian==(bai+shi+ge)){
+			console.log(i);
+		}
+		
+	}
+	</script>	
+	给定两个任意的正整数,求它们之间的所有完全平方数，完全平方数是指这个数是 
+    某个整数的平方，例如 16，25，36等都是完全平方数。
+    <script>
+	for(var i=1; i<10000;i++){
+		var num=Math.floor((Math.sqrt(i)));
+		if(num*num==i){
+			console.log(i); 
+		}
+	}
+	</script>
+	编写程序求下列多项式的前50项的和：
+      1-1/3+1/5-1/7+1/9-…… 
+      <script>
+	var sum=0;
+	for(var i=1;i<=50;i++){
+		var sum=sum+Math.pow(-1,i-1)*(1/(2*i-1));
+	}
+	console.log(sum);
+	</script>
+	请编写程序输出九九乘法表。
+	<script>
+	for(var i=1;i<=9;i++){
+		for( var j=1;j<=i;j++){
+			document.write(i+"*"+j+"="+i*j+"&nbsp;&nbsp;");
+		}
+		document.write("<br/>");
+	}
+	</script>
+	在屏幕上输出一个n行的金字塔图案，例如，若n=5,则图案如下： 
+	<script>
+	var num=1;
+	for(var i=1;i<=5;i++)
+	{  
+		for(var z=1;z<=5-i;z++){
+			document.write("&nbsp;");
+		}
+		for(var j=1;j<=i*2-1;j++){
+			document.write("*");
+			
+		}
+			document.write("<br/>");
+	}
+	</script>
+	求斐波那契数列前n项的和值,斐波那契数列如下： 
+       1，1，2，3，5，8，13，21……： 
+	<script>
+	var num1=1;
+	var num2=2;
+	var num3=0;
+	for(var i=3;i<15;i++){
+		num3=num1+num2;
+		num1=num2;
+		num2=num3;
+		
+	}
+		document.write(num3);
+</script>
+编写程序输出1-100之间的所有素数。//除了1和它本身能被整除之外其他都不行
+<script>
+	var count=0;
+	for(var i=2;i<=100;i++){
+		var flag=true;
+		for(var j=2;j<i;j++){
+			count++;
+			if(i%j==0){
+				flag=false;
+			}
+		}
+		if(flag){
+			console.log(i);
+		}
+	}
+	console.log(count);
+	</script>
+给定一个整数，把它的各位数字倒排过来形成一个新的整数
+    例如：给定12345   输出54321  ；给定 9870  输出789
+ <script>
+	var i=120456;
+	 var j=0;
+	 do{
+		 j=j*10+i%10;
+		 i=Math.floor(i/10);
+	 }while(i>0);
+	 console.log(j);
+	 
+	</script>
+		
+
+</body>
+</html>

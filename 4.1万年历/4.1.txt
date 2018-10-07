@@ -1,0 +1,33 @@
+Math.ceil() ； 上
+Math.round();四舍五入
+Math.floor();下
+流程控制语句：
+while   do..while  for
+
+重复的自动的做一件事情
+for(; ;){}
+
+var i=1;
+while(i<10){
+document.write(i+"<br/>");
+i++;
+}
+var j=1;
+do{
+document.write(i+"<br/>");
+j++;
+}while(j<=10);
+for( 1; 2  ;4)
+{document.write(i+"<br/>");   这是第3步；}
+
+
+var z=1;
+for(;;){
+document.write(z+"<br/>");
+break;//终止跳出一层循环
+Math.pow(x,y)  意思是x的y次方
+Math.sqrt();开平方根
+
+循环的嵌套
+最外面的控制竖着的
+里面的控制横着的
